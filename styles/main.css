@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+    --bg: #ffffff;
+    --lines: #e0e0e0;
+    --inputs: #f4f4f4;
+    --purple: #7b38f9;
+    --text: #2d2d2d;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    background-color: var(--bg);
+}
+
+
+/* ==================== NAVBAR ==================== */
+
+nav {
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    background-color: #ffffff50;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    border-bottom: 3px solid var(--lines);
+    z-index: 999;
+}
+
+nav .left {
+    width: 135px;
+    margin-top: 2px;
+}
+
+nav .right .profile {
+    width: 55px;
+    margin-top: 5px;
+}
+
+
+/* ==================== ASIDE ==================== */
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10vh;
+}
+
+main aside {
+    width: 30vw;
+    min-height: 100vh;
+    border-right: 3px solid var(--lines);
+    padding: 20px;
+}
+
+main aside h1 {
+    color: var(--text);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+main aside .titles {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+}
+
+main aside form{
+    margin-top: 10px;
+}
+main aside form input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--inputs);
+    border-radius: 15px;
+    padding: 17px;
+    padding-left: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+main aside form input::placeholder {
+    opacity: 0.6;
+    font-weight: 600;
+}
+
+main aside form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+main aside form input[name="price"],
+main aside form input[name="discount"] {
+    width: 49%;
+}
+
+main aside form button {
+    border-radius: 10px;
+    color: var(--bg);
+    margin-top: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 15px 0px;
+    width: 100%;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg,#af5aff,#7b38f9);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+}
+main aside .btns{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 75px;
+    overflow: hidden;
+}
+
+/* =============== PRODUCTS =============== */
+
+main .product-section {
+    width: 70vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+}
+
+main .product-section form {
+    width: 100%;
+    position: relative;
+}
+
+main .product-section form button {
+    border: none;
+    outline: none;
+}
+
+main .product-section form i {
+    position: absolute;
+    font-size: 1.6rem;
+    left: 22px;
+    top: 20px;
+    opacity: 0.3;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+main .product-section form i:hover {
+    opacity: 0.7;
+}
+
+main .product-section form input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--inputs);
+    border-radius: 15px;
+    padding: 20px 17px;
+    padding-left: 65px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+main .product-section form input[type="text"]::placeholder {
+    opacity: 0.6;
+    font-weight: 600;
+}
+
+/* Products */
+
+main .product-section table {
+    width: 100%;
+}
+
+main .product-section table tr {
+    width: 100%;
+}
+
+main .product-section table thead tr {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+
+main .product-section tr th:nth-child(1) {
+    width: 20%;
+    text-align: start;
+}
+
+main .product-section tr th:nth-child(2),
+main .product-section tr th:nth-child(3),
+main .product-section tr th:nth-child(4) {
+    width: 13%;
+    text-align: start;
+}
+
+main .product-section tr th:nth-child(5) {
+    width: 15%;
+    text-align: start;
+}
+
+main .product-section tr th:nth-child(6),
+main .product-section tr th:nth-child(7) {
+    width: 13%;
+    text-align: start;
+}
+
+main .product-section tr td {
+    line-height: 22px;
+    padding: 10px 0px;
+    padding-right: 5px;
+    font-size: 1.3rem;
+    border-bottom: 3px solid var(--lines);
+}
+
+main .product-section tr td img {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+main .product-section tr {
+    border-bottom: 3px solid var(--purple);
+}
+main .product-section .result {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   padding-right: 40px;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+main .product-section .result p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #b9b9b9;
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: 2px solid var(--lines);
+    
+}
+main .product-section .result p span {
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.8s;
+}
+.not-found{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--text);
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 300px;
+    text-align: center;
+}
+#close-search {
+   position: absolute;
+   right : 70px;
+   top: -2px;
+}
+#close-search i {
+    font-size: 2rem !important;
+}

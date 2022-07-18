@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS System</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav>
+      <img src="./imgs/logo.png" alt="Egoan logo" class="left" />
+      <div class="right">
+        <a href=""
+          ><img src="./imgs/profile.png" alt="profile" class="profile"
+        /></a>
+
+      </div>
+    </nav>
+
+    <main>
+      <!-- ==================== ASIDE ==================== -->
+      <aside>
+        <div class="titles">
+          <h1>Create</h1>
+          <h1>Update</h1>
+        </div>
+        <form action="" method="post">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            autocomplete="off"
+            id="nameInp"
+            spellcheck="false"
+          />
+          <div>
+            <input
+              type="number"
+              name="price"
+              placeholder="Price"
+              autocomplete="off"
+              id="priceInp"
+            />
+            <input
+              type="number"
+              name="discount"
+              placeholder="Discount"
+              autocomplete="off"
+              id="discInp"
+            />
+          </div>
+          <input
+            type="text"
+            name="category"
+            placeholder="Category"
+            autocomplete="off"
+            id="catoInp"
+            spellcheck="false"
+          />
+          <input
+            type="number"
+            name="amount"
+            placeholder="Amount"
+            autocomplete="off"
+            id="amountInp"
+          />
+          <div class="btns">
+            <button id="addBtn">
+              <span>Add</span>
+            </button>
+            <button id="editBtn">
+              <span>Update</span>
+            </button>
+          </div>
+        </form>
+      </aside>
+      <!-- ================== PRODUCTS ================== -->
+      <section class="product-section">
+        <form action="" method="get">
+          <input
+            type="text"
+            placeholder="Search"
+            name="search"
+            autocomplete="off"
+            id="searchInp"
+            spellcheck="false"
+          />
+          <button><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i></button>
+          <button id="close-search"><i class="fa-solid fa-xmark"></i></button>
+        </form>
+        <div class="result" id="searchResult"></div>
+
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Disc</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Action</th>
+          </thead>
+          <tbody id="productsContainer">
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
